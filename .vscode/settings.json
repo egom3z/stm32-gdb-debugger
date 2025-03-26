@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "syscall_thread.h": "c",
+        "uart_polling.h": "c",
+        "arm.h": "c"
+    }
+}

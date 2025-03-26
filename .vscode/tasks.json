@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-firmware",
+            "type": "shell",
+            "command": "make",
+            "args": ["flash-nogdb", "USER_PROJ=test_8_0"],
+            "problemMatcher": ["$gcc"],
+            "group": { "kind": "build", "isDefault": true }
+        },
+        {
+            "label": "link-latest-elf",
+            "type": "shell",
+            "command": ".vscode/link_latest_elf.sh",
+            "args": ["test_8_0"],
+            "problemMatcher": []
+        },
+        {
+            "label": "build-and-link",
+            "dependsOn": ["build-firmware", "link-latest-elf"],
+            "dependsOrder": "sequence"
+        }
+    ]
+}

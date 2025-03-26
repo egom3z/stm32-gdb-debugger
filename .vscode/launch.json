@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32 via osx_ocd",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "external",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/.vscode/latest.elf",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "build-and-link",
+            "gdbTarget": "localhost:3333",
+            "device": "STM32F4",
+            "svdFile": "${workspaceRoot}/STM32F4.svd"
+        }
+    ]
+}
